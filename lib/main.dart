@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:launch_app/screen/homepage/home_page.dart';
+import 'package:launch_app/screen/home/home_screen.dart';
+
+import 'screen/auth/auth_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,9 +14,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.grey,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(),
+      initialRoute: Auth.id,
+      routes: {
+        Auth.id: (context) => Auth(),
+        HomeScreen.id: (context) => HomeScreen()
+      },
     );
   }
 }
