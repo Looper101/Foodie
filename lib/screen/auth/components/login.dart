@@ -104,7 +104,7 @@ showForgotPasswordModal({BuildContext context, double height, double width}) {
           ),
           width: width,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
                 'Forgot Password',
@@ -114,7 +114,11 @@ showForgotPasswordModal({BuildContext context, double height, double width}) {
                   fontSize: 25,
                 ),
               ),
-              Text('Email address'),
+              SizedBox(height: height * 0.01),
+              Text(
+                'Email address',
+                style: TextStyle(color: Pallete.subtitle),
+              ),
               InputField(),
               SizedBox(
                 height: 20,
